@@ -15,7 +15,7 @@ T = 4.0;          % Time horizon
 dT = 0.02;
 N = ceil(T/dT); % number of control intervals
 
-alpha_dot_max = 80*pi/180;     %Max limb rotation speed in rad/s
+alpha_dot_max = 4*pi/180;     %Max limb rotation speed in rad/s
 
 StDim = 5;
 ConDim = 2;
@@ -29,7 +29,7 @@ StateLwBnd = -[inf;inf;inf;inf;inf];
 % FnlSt = [0.001; -0.001; 0; 0.1; 0];
 init_limb_angle=55*pi/180;
 IntSt = [init_limb_angle; -init_limb_angle; 0; 0; 0];
-FnlSt = [init_limb_angle; -init_limb_angle; 0.02686; 0; 0];
+FnlSt = [init_limb_angle; -init_limb_angle; 0.1; 0; 0];
 %% Symbolic equations
 
 % Declare model variables
